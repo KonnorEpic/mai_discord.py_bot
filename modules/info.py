@@ -16,7 +16,7 @@ class Info:
     emb.add_field(name="Name", value="%s" % (self.bot.user.name), inline=False)
     emb.add_field(name="ID", value="%s" % (self.bot.user.id), inline=False)
     emb.add_field(name="Lib", value="discord.py (rewrite) [%s]" % (discord.__version__), inline=False)
-    emb.set_footer(text="requested by %s" % (ctx.author.name))
+    emb.set_footer(text="Requested by %s" % (ctx.author.name))
 
     await ctx.send(embed=emb)
 
