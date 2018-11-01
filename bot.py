@@ -7,8 +7,7 @@ bot = commands.Bot(command_prefix="m>")
 modules = [
   "modules.fun",
   "modules.info",
-  "modules.owner",
-  "modules.image"
+  "modules.owner"
 ]
 
 for module in modules:
