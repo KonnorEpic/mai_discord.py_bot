@@ -1,4 +1,4 @@
-import requests as req
+import requests
 import discord
 from discord.ext import commands
 
@@ -9,7 +9,7 @@ class NSFW:
   @commands.command()
   async def hentai(self, ctx):
     if ctx.channel.is_nsfw():
-      res = req.get("https://nekobot.xyz/api/image?type=hentai")
+      res = requests.get("https://nekobot.xyz/api/image?type=hentai")
       data = res.json()
       
       emb = discord.Embed(title="Hentai successfully generate!")
