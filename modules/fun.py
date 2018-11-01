@@ -12,7 +12,7 @@ class Fun:
   async def coinflip(self, ctx):
     coins = random.choice(lists.coins)
 
-    await ctx.send("**%s** flipped a coin and got **%s**" % (ctx.author.name, coins))
+    await ctx.send("**%s** flipped a coin and got **%s**!" % (ctx.author.name, coins))
 
   @commands.command()
   async def say(self, ctx):
