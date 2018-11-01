@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+import os
 
 bot = commands.Bot(command_prefix="m>")
 
@@ -20,4 +21,4 @@ async def on_ready():
   print("discord.py (rewrite) version: %s" % (discord.__version__))
   print("--------------------------------------")
 
-bot.run()
+bot.run(str(os.environ.get("TOKEN")))
