@@ -16,7 +16,7 @@ for module in modules:
 
 @bot.event
 async def on_ready():
-  await bot.change_presence(status=discord.Status.dnd, activity=discord.Game(name="m>help"))
+  await bot.change_presence(status=discord.Status.dnd, activity=discord.Game(name="m>help | https://github.com/KonnorEpic/mai_discord.py_bot"))
   print("Name: %s" % (bot.user.name))
   print("ID: %s" % (bot.user.id))
   print("discord.py (rewrite) version: %s" % (discord.__version__))
