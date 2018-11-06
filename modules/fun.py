@@ -40,6 +40,14 @@ class Fun:
       await ctx.send("You not provided text.")
     else:
       await ctx.send("```" + f.renderText(txt) + "```")
+      
+  @commands.command()
+  async def reverse(self, ctx):
+    txt = ctx.message.content[10:]
+    try:
+      await ctx.send(txt[::-1])
+    except:
+      await ctx.send("You not provided text.")
 
 def setup(bot):
   bot.add_cog(Fun(bot))
