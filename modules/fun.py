@@ -1,6 +1,7 @@
 import random
 import discord
 from discord.ext import commands
+from pyfiglet import Figlet
 
 from data import lists
 
@@ -29,6 +30,16 @@ class Fun:
       await ctx.send(txt)
     except:
       await ctx.send("You not provided text.")
+      
+  @commands.command()
+  async def ascii(self, ctx):
+    f = Figlet(font="doom")
+    txt = ctx.message.content[7:]
+
+    if len(txt) < 1:
+      await ctx.send("You not provided text.")
+    else:
+      await ctx.send("```" + f.renderText(txt) + "```")
 
 def setup(bot):
   bot.add_cog(Fun(bot))
